@@ -1,4 +1,4 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/dlikhten/.thunderbird/gg5l3mdz.default/extensions'
-let g:netrw_dirhist_2='/home/dlikhten/.vim'
+let g:netrw_dirhist_1='/home/dlikhten-mounts/intranet@mssm-dev/production/coi2011-dl/migration'
+let g:netrw_dirhist_2='/media/8A07-A343/vimfiles'
