@@ -35,7 +35,8 @@ set wildignore=*.o,*.class
 
 " Always show the mode and command on the status line
 " (again, some systems do this by default but not others)
-set showmode showcmd
+set showmode 
+set showcmd
 
 " Make searching case insensitive (unless pattern contains upper case chars) and incremental, and don't highlight matches
 set nohlsearch ignorecase incsearch smartcase
@@ -67,6 +68,8 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+" When pressing <leader>cd switch to the directory of the open buffer
+map <Leader>cd :cd %:p:h<cr>
 
 " Bubble single lines
 nmap <C-Up> [e
@@ -105,9 +108,6 @@ vnoremap <F1> <ESC>
 nnoremap <leader>r :source ~/.vim/Session.vim<cr>
 
 nnoremap <leader><space> :noh<cr>
-
-" When pressing <leader>cd switch to the directory of the open buffer
-map <Leader>cd :cd %:p:h<cr>
 
 " - tweaks for snipmate ---------------------------------------------------
 function! ReloadSnippets( snippets_dir, ft )
