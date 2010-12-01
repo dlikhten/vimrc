@@ -1,1 +1,13 @@
-Just some vim configs to make shit easier for myself. 
+Just some vim configs to make shit easier for myself.
+
+Drop this directory anywhere on your hard drive. Preferably in ~/.vim
+
+On linux:
+
+cd ~
+ln -s <path to .vim>/vimrc .vimrc
+
+On windows:
+cd ~
+cat 'source <path to .vim>/vimrc'
+
