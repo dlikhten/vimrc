@@ -41,7 +41,8 @@ set showcmd
 " Make searching case insensitive (unless pattern contains upper case chars) and incremental, and don't highlight matches
 set nohlsearch ignorecase incsearch smartcase
 
-
+"** Set the leader **
+let mapleader=','
 
 " show tabs and newlines in subtle gray, toggle display with \w
 set list
@@ -63,7 +64,6 @@ nmap <C-Tab> :tabnext<CR>
 nmap <C-S-Tab> :tabprev<CR>
 
 " Open files relative to current directory of the current file.
-let mapleader=','
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
