@@ -3,14 +3,11 @@ set nocompatible
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 set hidden
 set number
 set vb t_vb=
 set ts=4 sts=4 sw=4 expandtab
-colorscheme ir_black
+colorscheme desert
 set smartcase
 
 " Makes filetype specific indentation and plugins work properly
@@ -46,7 +43,7 @@ let mapleader=','
 
 " show tabs and newlines in subtle gray, toggle display with \w
 set list
-set listchars=tab:»\ ,eol:¬
+" set listchars=tab:»\ ,eol:¬
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 nmap <leader>w :set list!
