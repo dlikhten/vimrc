@@ -1,6 +1,11 @@
 set nocompatible
 
+if !exists("g:vimdir")
+    let g:vimdir = "~/.vim"
+endif
+
 source $VIMRUNTIME/mswin.vim
+call pathogen#runtime_append_all_bundles() 
 behave mswin
 
 set hidden
@@ -96,13 +101,15 @@ nnoremap <Leader>f :NERDTree<cr>
 " use jj to cancel insert mode
 inoremap jj <ESC> 
 
+let g:session_file = g:vimdir.'/Session.vim'
+
 " disable F1 help, make it save current session instead
-nnoremap <F1> :mksession! ~/.vim/Session.vim<cr>
+nnoremap <F1> :mksession! echo g:session_file<cr>
 inoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 " ,r reload saved session
-nnoremap <leader>r :source ~/.vim/Session.vim<cr>
+nnoremap <leader>r :source echo g:session_file<cr>
 
 nnoremap <leader><space> :noh<cr>
 
